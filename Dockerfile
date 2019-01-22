@@ -18,7 +18,7 @@ ENV PATH="/kotlin-native/bin:/usr/lib/jvm/openjdk-9/java/bin:${PATH}"
 RUN echo "JAVA_HOME=$(which java)" && export PATH JAVA_HOME && mkdir /build && mkdir /runtime
 
 WORKDIR /compiler-setup
-ADD KotlinNative-HelloWorld .
+ADD KotlinNative-HelloWorld KotlinNative-HelloWorld
 RUN cd KotlinNative-HelloWorld && ./gradlew build --no-daemon && cd / && rm -rf /compiler-setup
 
 ENTRYPOINT /bin/bash

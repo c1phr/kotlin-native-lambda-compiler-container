@@ -26,7 +26,7 @@ jobs:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               echo "$DOCKERHUB_PASSWORD" | docker login --username "$DOCKERHUB_USERNAME" --password-stdin
-              IMAGE_TAG="0.0.${CIRCLE_BUILD_NUM}"
+              IMAGE_TAG="0.${CIRCLE_BUILD_NUM}"
               IMAGE_NAME="c1phr/kotlin-native-lambda-runtime-compiler"
               docker tag $IMAGE_NAME:latest $IMAGE_NAME:$IMAGE_TAG
               docker push $IMAGE_NAME:latest

@@ -1,5 +1,5 @@
 # Kotlin/Native Lambda Compiler Container
-![](https://img.shields.io/docker/pulls/rdbatch02/kotlin-native-lambda-runtime-compiler.svg?style=flat)
+![](https://img.shields.io/docker/pulls/c1phr/kotlin-native-lambda-runtime-compiler.svg?style=flat)
 
 
 Since Kotlin/Native doesn't have a virtual machine, it must be built for the platform that it's intended to be run on. 

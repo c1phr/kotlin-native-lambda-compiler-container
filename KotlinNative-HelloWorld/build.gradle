@@ -5,7 +5,7 @@ repositories {
     mavenCentral()
 }
 kotlin {
-    linuxX64 {
+    linuxX64("helloWorld") {
         binaries {
             executable {
                 entryPoint = 'sample.main'

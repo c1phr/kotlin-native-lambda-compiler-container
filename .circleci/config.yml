@@ -9,7 +9,7 @@ jobs:
       - setup_remote_docker
       - restore_cache:
           keys:
-            - v1-{{ .Branch }}
+            - v2-{{ .Branch }}
           paths:
             - /caches/kotlin-native-lambda-runtime-compiler.tar
       - run:
@@ -38,6 +38,6 @@ jobs:
             mkdir -p /caches
             docker save -o /caches/kotlin-native-lambda-runtime-compiler.tar c1phr/kotlin-native-lambda-runtime-compiler
       - save_cache:
-          key: v1-{{ .Branch }}-{{ epoch }}
+          key: v2-{{ .Branch }}-{{ epoch }}
           paths:
             - /caches/kotlin-native-lambda-runtime-compiler.tar      

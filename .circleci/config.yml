@@ -7,16 +7,16 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
-      - restore_cache:
-          keys:
-            - v2-{{ .Branch }}
-          paths:
-            - /caches/kotlin-native-lambda-runtime-compiler.tar
-      - run:
-          name: Load Docker image layer cache
-          command: |
-            set +o pipefail
-            docker load -i /caches/kotlin-native-lambda-runtime-compiler.tar | true
+#      - restore_cache:
+#          keys:
+#            - v2-{{ .Branch }}
+#          paths:
+#            - /caches/kotlin-native-lambda-runtime-compiler.tar
+#      - run:
+#          name: Load Docker image layer cache
+#          command: |
+#            set +o pipefail
+#            docker load -i /caches/kotlin-native-lambda-runtime-compiler.tar | true
       - run:
           name: Build application Docker image
           command: |
